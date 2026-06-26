@@ -183,6 +183,10 @@ function chartOptions(extra = {}) {
   };
 }
 
+function bubbleRadius(value, maxValue, minRadius = 4, maxBoost = 14) {
+  return minRadius + Math.sqrt(Number(value || 0) / Math.max(maxValue, 1)) * maxBoost;
+}
+
 function defaultDataLabelFormatter(raw, index, context) {
   const value = typeof raw === "object" ? raw?.y : raw;
   if (context.dataset.dataLabelType === "percent") return `${fmtDecimal(value, 0)}%`;
@@ -616,7 +620,7 @@ function renderAgent(data) {
           data: agents.map((row) => ({
             x: row.Total_ticket,
             y: row.SLA_On_Time_Rate * 100,
-            r: 6 + Math.sqrt(row.Total_ticket / maxTickets) * 24,
+            r: bubbleRadius(row.Total_ticket, maxTickets),
             label: row.Agent_tiep_nhan,
             late: row.Late_ticket,
             delay: row.Avg_delay_minutes,
@@ -640,6 +644,9 @@ function renderAgent(data) {
       ],
     },
     options: chartOptions({
+      layout: {
+        padding: { top: 12, right: 16, bottom: 12, left: 16 },
+      },
       scales: {
         x: { beginAtZero: true, title: { display: true, text: "Tổng ticket" }, grid: { color: "#F0EDF0" } },
         y: { beginAtZero: true, max: 100, title: { display: true, text: "Tỷ lệ xử lý đúng hạn (%)" }, grid: { color: "#F0EDF0" } },
@@ -737,7 +744,7 @@ function renderAi(data) {
           data: topics.map((row) => ({
             x: row.total_feedback,
             y: Number(row.avg_pain_score || 0) * 100,
-            r: 6 + Math.sqrt(row.priority_score_new / maxPriority) * 24,
+            r: bubbleRadius(row.priority_score_new, maxPriority),
             label: row.topic_label,
             group: row.topic_group,
             priority: row.priority_score_new,
@@ -754,6 +761,9 @@ function renderAi(data) {
       ],
     },
     options: chartOptions({
+      layout: {
+        padding: { top: 12, right: 16, bottom: 12, left: 16 },
+      },
       scales: {
         x: { beginAtZero: true, title: { display: true, text: "Tổng phản hồi" }, grid: { color: "#F0EDF0" } },
         y: {
