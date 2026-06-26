@@ -17,211 +17,347 @@
     </a>
     <nav class="nav-links" aria-label="Dashboard sections">
       <a href="#overview">Tổng quan</a>
-      <a href="#operation">SLA</a>
-      <a href="#services">Dịch vụ</a>
-      <a href="#ai">AI Insight</a>
-      <a href="#deep-dive">Deep dive</a>
+      <a href="#operation">Xử lý đúng hạn</a>
+      <a href="#services">Vận hành</a>
+      <a href="#ai">Phản hồi khách hàng</a>
+      <a href="#recommendations">Đề xuất</a>
+      <a class="resource-link" href="https://drive.google.com/drive/folders/1E3Dw21zOwgcZdGobF42jFQZ0ecmXSZz7" target="_blank" rel="noopener">Tải toàn bộ tài nguyên</a>
     </nav>
-    <span class="build-chip" id="generatedAt">Đang tải dữ liệu</span>
   </header>
 
   <main>
     <section class="hero" id="overview">
       <div class="hero-copy">
         <p class="eyebrow">MoMo CX Case Study</p>
-        <h1>Bảng điều khiển vận hành và Voice of Customer</h1>
+        <h1>Báo cáo phân tích trải nghiệm khách hàng MoMo</h1>
         <p class="hero-text">
-          Dashboard HTML thuần, tính toán từ Excel/CSV đã xử lý, vẽ lại biểu đồ theo bảng màu MoMo 2.0 và tối ưu để review nhanh trên trình duyệt.
+          Ứng dụng dữ liệu và trí tuệ nhân tạo để giải mã hành trình khách hàng, nhận diện điểm nghẽn trong vận hành và đề xuất hướng cải thiện trải nghiệm người dùng.
         </p>
         <div class="hero-actions">
-          <a class="primary-link" href="#operation">Xem SLA</a>
-          <a class="secondary-link" href="#ai">Xem AI insights</a>
+          <a class="primary-link" href="#operation">Xem báo cáo vận hành</a>
+          <a class="secondary-link" href="#ai">Xem phản hồi khách hàng</a>
         </div>
       </div>
-      <div class="brand-panel" aria-label="MoMo brand palette preview">
-        <div class="brand-panel-top">
-          <span>MoMo Trust Display</span>
-          <strong>50k</strong>
-        </div>
-        <div class="palette-strip">
-          <span style="background:#FFEFF4"></span>
-          <span style="background:#FEC8DC"></span>
-          <span style="background:#FF9DBE"></span>
-          <span style="background:#F95396"></span>
-          <span style="background:#A50064"></span>
-        </div>
-        <p>Bảng màu chủ đạo được dùng nhất quán trong KPI, chart, tag trạng thái và highlight rủi ro.</p>
-      </div>
+      <aside class="story-panel" aria-label="Câu chuyện phân tích chính">
+        <p class="eyebrow">Câu chuyện phân tích chính</p>
+        <ul>
+          <li>Dữ liệu ticket giúp nhận diện nơi quy trình vận hành đang bị nghẽn.</li>
+          <li>Các chỉ số xử lý đúng hạn cho thấy mức độ đáp ứng cam kết với khách hàng.</li>
+          <li>Phản hồi khách hàng giúp giải thích nguyên nhân phía sau các điểm nghẽn.</li>
+          <li>Từ đó, báo cáo đề xuất hướng cải thiện tập trung vào nguyên nhân gốc, thay vì chỉ xử lý phần nổi của vấn đề.</li>
+        </ul>
+      </aside>
     </section>
 
-    <section class="section">
+    <section class="section narrative-section">
       <div class="section-head">
-        <p class="eyebrow">Executive Summary</p>
-        <h2>KPI tổng quan</h2>
-        <p>Những chỉ số lõi để đọc nhanh sức khỏe hệ thống chăm sóc khách hàng.</p>
+        <h2>Thông điệp chính từ dữ liệu</h2>
+      </div>
+      <div class="analysis-card">
+        <p>Báo cáo này tổng hợp dữ liệu từ hệ thống ticket, thời gian phản hồi và ý kiến khách hàng để mang đến cái nhìn đa chiều về trải nghiệm người dùng tại MoMo.</p>
+        <p>Kết quả cho thấy hệ thống chăm sóc khách hàng đang chịu áp lực lớn. Trong 5.187 ticket được phân tích, chỉ có 41,8% ticket được xử lý đúng thời gian cam kết, trong khi 58,2% ticket bị xử lý trễ. Trung bình, thời gian xử lý thực tế cao gấp 2,24 lần so với thời gian cam kết.</p>
+        <p>Ở góc độ vận hành, nhóm dịch vụ thanh toán tiện ích như Điện, Mua mã thẻ di động, Nạp tiền điện thoại, Mua sim, Nạp data và Mua mã thẻ data là các nhóm cần ưu tiên vì có số lượng ticket lớn, tỷ lệ trễ cao hoặc thời gian trễ kéo dài.</p>
+        <p>Ở góc độ phản hồi khách hàng, dữ liệu cho thấy hai vấn đề nổi bật: ứng dụng bị lag, chậm, không ổn định và quy trình gọi điện, nhắc nợ hoặc liên hệ người thân gây bức xúc. Đây là các tín hiệu cần được xử lý sớm để bảo vệ trải nghiệm và niềm tin của khách hàng.</p>
+      </div>
+
+      <div class="section-head subsection-head">
+        <h2>Tổng quan chất lượng dịch vụ</h2>
+        <p>Các chỉ số dưới đây giúp đọc nhanh quy mô công việc, mức độ đáp ứng cam kết và áp lực xử lý của hệ thống chăm sóc khách hàng.</p>
+      </div>
+      <div class="analysis-card slim">
+        <p>Số lượng ticket cho biết quy mô công việc. Tỷ lệ xử lý đúng hạn cho biết chất lượng đáp ứng cam kết. Số ticket xử lý trễ cho biết mức độ quá tải. Chỉ số thời gian xử lý so với cam kết cho biết trung bình đội xử lý đang mất bao lâu so với thời gian được cam kết ban đầu.</p>
+        <p>Nhìn nhanh có thể thấy hệ thống đang có áp lực lớn: số ticket xử lý trễ cao hơn số ticket xử lý đúng hạn.</p>
       </div>
       <div class="kpi-grid" id="kpiGrid"></div>
     </section>
 
+    <section class="section narrative-section" id="method">
+      <div class="section-head">
+        <h2>Dữ liệu được xử lý như thế nào?</h2>
+        <p>Trước khi phân tích, dữ liệu được chuẩn hóa để đảm bảo mỗi ticket có thể được theo dõi thống nhất từ lúc phát sinh đến lúc phản hồi. Cách xử lý này giúp kết quả phản ánh đúng chất lượng vận hành trong khung giờ làm việc thực tế.</p>
+      </div>
+      <div class="method-grid">
+        <article class="method-card">
+          <strong>Làm sạch dữ liệu</strong>
+          <p>Chuẩn hóa tên cột, mã ticket, định dạng ngày và kiểm tra các trường bắt buộc trước khi tính toán.</p>
+        </article>
+        <article class="method-card">
+          <strong>Ghép dữ liệu xử lý</strong>
+          <p>Kết hợp dữ liệu ticket với dữ liệu thời gian xử lý để xác định thời gian thực tế và trạng thái đúng hạn hoặc trễ.</p>
+        </article>
+        <article class="method-card">
+          <strong>Tính trong giờ làm việc</strong>
+          <p>Chỉ tính thời gian xử lý từ 09:00 đến 18:00, từ Thứ Hai đến Thứ Sáu. Thời gian ngoài giờ và cuối tuần không được tính.</p>
+        </article>
+        <article class="method-card">
+          <strong>Sắp xếp mức độ ưu tiên xử lý</strong>
+          <p>Kết hợp số lượng ticket, tỷ lệ trễ và thời gian trễ trung bình để tìm nhóm dịch vụ có tác động lớn nhất.</p>
+        </article>
+      </div>
+    </section>
+
     <section class="section" id="operation">
       <div class="section-head">
-        <p class="eyebrow">Phần A</p>
-        <h2>Khối lượng ticket và SLA theo tuần</h2>
-        <p>Cột thể hiện tổng ticket; đường thể hiện SLA đúng hạn và tỷ lệ trễ.</p>
+        <h2>Hiệu quả xử lý yêu cầu khách hàng</h2>
+        <p>Phần này đánh giá chất lượng phục vụ dựa trên khả năng xử lý ticket trong đúng thời gian cam kết với khách hàng.</p>
+      </div>
+      <div class="analysis-card">
+        <p>Để đánh giá chất lượng dịch vụ, báo cáo phân tích từng ticket trong khung thời gian làm việc thực tế, từ 09:00 đến 18:00, từ Thứ Hai đến Thứ Sáu. Những khoảng thời gian ngoài khung này không được tính vào thời gian xử lý.</p>
+        <p>Một ticket được xem là xử lý đúng hạn khi thời gian xử lý thực tế không vượt quá thời gian cam kết. Ngược lại, ticket bị xem là xử lý trễ khi thời gian thực tế vượt quá cam kết ban đầu.</p>
+        <p>Kết quả cho thấy khối lượng ticket biến động mạnh theo tuần. Đáng chú ý, khi bước vào các tuần cuối kỳ, tỷ lệ xử lý đúng hạn giảm rõ rệt, cho thấy hệ thống có dấu hiệu quá tải hoặc chưa phân bổ nguồn lực phù hợp với mức độ phức tạp của ticket.</p>
       </div>
       <div class="grid two">
         <article class="panel wide">
           <div class="panel-head">
             <div>
-              <h3>Volume x SLA trend</h3>
-              <p>Ticket tăng/giảm theo tuần và chất lượng xử lý tương ứng.</p>
+              <h3>Khối lượng ticket và tỷ lệ xử lý đúng hạn theo tuần</h3>
+              <p>Cột thể hiện số ticket; đường thể hiện tỷ lệ xử lý đúng hạn và tỷ lệ xử lý trễ.</p>
             </div>
-            <span class="tag pink">Combo</span>
+            <span class="tag pink">Xu hướng</span>
           </div>
           <div class="chart-box tall"><canvas id="weeklyCombo"></canvas></div>
+          <div class="chart-legend">
+            <span><i style="background:#FEC8DC"></i>Hồng: tổng ticket</span>
+            <span><i style="background:#2EAD6B"></i>Xanh: xử lý đúng hạn</span>
+            <span><i style="background:#D92D20"></i>Đỏ: xử lý trễ</span>
+          </div>
         </article>
         <article class="panel">
           <div class="panel-head">
             <div>
-              <h3>Phân bổ trễ SLA</h3>
-              <p>Không tính nhóm không trễ.</p>
+              <h3>Phân bổ mức độ xử lý trễ</h3>
+              <p>Chỉ hiển thị các ticket bị xử lý trễ để thấy mức độ nghiêm trọng của phần việc tồn đọng.</p>
             </div>
-            <span class="tag amber">Delay</span>
+            <span class="tag amber">Mức trễ</span>
           </div>
           <div class="chart-box tall"><canvas id="delayDonut"></canvas></div>
+          <div class="chart-legend">
+            <span><i style="background:#FF9DBE"></i>Hồng: trễ 4 giờ-1 ngày</span>
+            <span><i style="background:#F59E0B"></i>Cam: trễ 1-4 giờ</span>
+            <span><i style="background:#D92D20"></i>Đỏ: trễ trên 1 ngày</span>
+            <span><i style="background:#7B0000"></i>Đỏ đậm: trễ dưới hoặc bằng 1 giờ</span>
+          </div>
         </article>
       </div>
       <div class="grid two">
         <article class="panel">
           <div class="panel-head">
             <div>
-              <h3>Đúng hạn vs trễ SLA</h3>
-              <p>Stacked bar theo tuần.</p>
+              <h3>Ticket đúng hạn và ticket xử lý trễ theo tuần</h3>
+              <p>Mỗi cột cho biết trong từng tuần có bao nhiêu ticket đúng hạn và bao nhiêu ticket trễ.</p>
             </div>
-            <span class="tag green">SLA</span>
+            <span class="tag green">Đúng hạn</span>
           </div>
           <div class="chart-box"><canvas id="weeklyStack"></canvas></div>
+          <div class="chart-legend">
+            <span><i style="background:#2EAD6B"></i>Xanh: đúng hạn</span>
+            <span><i style="background:#D92D20"></i>Đỏ: xử lý trễ</span>
+          </div>
         </article>
         <article class="panel">
           <div class="panel-head">
             <div>
-              <h3>Ticket theo ngày</h3>
-              <p>Phân bổ khối lượng theo weekday.</p>
+              <h3>Phân bổ ticket theo ngày trong tuần</h3>
+              <p>Biểu đồ này cho biết ticket tập trung vào ngày nào trong tuần. Dữ liệu hiện tại chưa có giờ tạo ticket thật nên không dùng để phân tích theo từng khung giờ trong ngày.</p>
             </div>
-            <span class="tag blue">Volume</span>
+            <span class="tag blue">Theo ngày</span>
+          </div>
+          <div class="chart-filter">
+            <label for="weekdayWeekSelect">Xem theo tuần</label>
+            <select id="weekdayWeekSelect" aria-label="Chọn tuần để xem phân bổ ticket theo ngày">
+              <option value="all">Tất cả các tuần</option>
+            </select>
           </div>
           <div class="chart-box"><canvas id="weekdayBar"></canvas></div>
+          <div class="chart-legend">
+            <span><i style="background:#A50064"></i>Hồng MoMo: tổng ticket</span>
+            <span><i style="background:#F2708F"></i>Đỏ nhạt: ticket xử lý trễ</span>
+          </div>
         </article>
       </div>
     </section>
 
     <section class="section" id="services">
       <div class="section-head">
-        <p class="eyebrow">Phần B</p>
-        <h2>Dịch vụ ưu tiên và điểm nghẽn</h2>
-        <p>Priority Score kết hợp volume, tỷ lệ trễ, độ trễ trung bình và tác động nghiệp vụ.</p>
+        <h2>Xác định các dịch vụ cần ưu tiên tối ưu hóa</h2>
+        <p>Phần này xác định những dịch vụ tạo áp lực lớn nhất lên vận hành và có khả năng ảnh hưởng mạnh đến trải nghiệm khách hàng.</p>
+      </div>
+      <div class="analysis-card">
+        <p>Trong vận hành, việc chỉ nhìn vào số lượng ticket là chưa đủ. Có những dịch vụ có ít ticket hơn nhưng thời gian trễ lại kéo dài, gây ảnh hưởng lớn đến trải nghiệm khách hàng.</p>
+        <p>Vì vậy, báo cáo sử dụng điểm ưu tiên xử lý để kết hợp ba yếu tố: số lượng ticket, tỷ lệ xử lý trễ và thời gian trễ trung bình. Cách tiếp cận này giúp xác định chính xác dịch vụ nào cần được xử lý trước.</p>
+        <p>Kết quả cho thấy nhóm dịch vụ thanh toán tiện ích đang tạo ra áp lực lớn. Trong đó, dịch vụ Điện có điểm ưu tiên cao nhất do thời gian trễ trung bình dài, còn các dịch vụ như Mua mã thẻ di động, Nạp tiền điện thoại và Nạp data tạo áp lực lớn vì có khối lượng ticket cao và tỷ lệ trễ đáng kể.</p>
       </div>
       <div class="grid two">
         <article class="panel">
           <div class="panel-head">
             <div>
-              <h3>Top dịch vụ Priority Score cao</h3>
-              <p>Nhóm cần ưu tiên xử lý trong vận hành.</p>
+              <h3>Dịch vụ cần ưu tiên xử lý</h3>
+              <p>Xếp hạng theo điểm ưu tiên, kết hợp số lượng ticket, tỷ lệ trễ và thời gian trễ trung bình.</p>
             </div>
-            <span class="tag pink">Priority</span>
+            <span class="tag pink">Ưu tiên</span>
           </div>
           <div class="chart-box extra"><canvas id="servicePriority"></canvas></div>
+          <div class="chart-legend">
+            <span><i style="background:#A50064"></i>Hồng/đỏ: ưu tiên cao</span>
+            <span><i style="background:#F59E0B"></i>Cam: cần theo dõi</span>
+            <span><i style="background:#2EAD6B"></i>Xanh: ít rủi ro hơn</span>
+          </div>
         </article>
         <article class="panel">
           <div class="panel-head">
             <div>
-              <h3>Ma trận ưu tiên</h3>
-              <p>X: volume, Y: delay, kích thước: priority.</p>
+              <h3>Ma trận ưu tiên theo dịch vụ</h3>
+              <p>Trục ngang là số ticket, trục dọc là thời gian trễ trung bình, kích thước điểm thể hiện mức độ ưu tiên.</p>
             </div>
-            <span class="tag red">Risk</span>
+            <span class="tag red">Rủi ro</span>
           </div>
           <div class="chart-box extra"><canvas id="serviceMatrix"></canvas></div>
+          <div class="chart-legend">
+            <span><i style="background:#A50064"></i>Điểm càng lớn nghĩa là tác động vận hành càng cao</span>
+            <span><i style="background:#F3D9E8"></i>Vùng nền hồng: vùng cần ưu tiên</span>
+          </div>
         </article>
       </div>
       <article class="panel">
         <div class="panel-head">
           <div>
-            <h3>Heatmap SLA theo dịch vụ x tuần</h3>
-            <p>Top 10 dịch vụ theo priority, màu càng đỏ là on-time rate càng thấp.</p>
+            <h3>Bảng nhiệt tỷ lệ xử lý đúng hạn theo dịch vụ và tuần</h3>
+            <p>Màu càng đỏ nghĩa là tỷ lệ xử lý đúng hạn càng thấp; màu xanh nghĩa là xử lý tốt hơn.</p>
           </div>
-          <span class="tag amber">Heatmap</span>
+          <span class="tag amber">Bảng nhiệt</span>
         </div>
-        <div id="slaHeatmap" class="heatmap" aria-label="Heatmap SLA theo dịch vụ và tuần"></div>
+        <div id="slaHeatmap" class="heatmap" aria-label="Bảng nhiệt tỷ lệ xử lý đúng hạn theo dịch vụ và tuần"></div>
+        <div class="chart-legend">
+          <span><i style="background:#D92D20"></i>Đỏ: tỷ lệ xử lý đúng hạn thấp</span>
+          <span><i style="background:#F59E0B"></i>Cam: cần theo dõi</span>
+          <span><i style="background:#2EAD6B"></i>Xanh: xử lý tốt</span>
+          <span><i style="background:#F6F3F5"></i>Dấu “-”: không có dữ liệu hoặc không đủ ticket trong tuần đó</span>
+        </div>
       </article>
     </section>
 
     <section class="section" id="agents">
       <div class="section-head">
-        <p class="eyebrow">Agent Performance</p>
         <h2>Hiệu suất xử lý theo nhân viên</h2>
-        <p>So sánh volume, SLA đúng hạn, ticket trễ và độ trễ trung bình.</p>
+        <p>Hiệu suất của nhân viên cần được xem xét và đánh giá dựa trên khối lượng và độ khó của ticket.</p>
+      </div>
+      <div class="analysis-card">
+        <p>Một nhân viên xử lý nhiều ticket hoặc thường xuyên tiếp nhận dịch vụ phức tạp có thể có tỷ lệ trễ cao hơn. Vì vậy, phần này không dùng để kết luận đơn giản rằng ai làm tốt hoặc chưa tốt.</p>
+        <p>Mục tiêu là phát hiện nơi cần phân bổ lại công việc, nơi cần hỗ trợ thêm và nhóm nhân viên cần được theo dõi trong điều kiện dữ liệu đủ lớn.</p>
       </div>
       <div class="grid two">
         <article class="panel">
           <div class="panel-head">
             <div>
-              <h3>Agent bubble chart</h3>
-              <p>Kích thước bong bóng phản ánh số ticket xử lý.</p>
+              <h3>Khối lượng ticket và tỷ lệ xử lý đúng hạn theo nhân viên</h3>
+              <p>Kích thước bong bóng phản ánh số ticket nhân viên xử lý.</p>
             </div>
-            <span class="tag blue">Agent</span>
+            <span class="tag blue">Nhân viên</span>
           </div>
           <div class="chart-box"><canvas id="agentBubble"></canvas></div>
+          <div class="chart-legend">
+            <span><i style="background:#F95396"></i>Hồng: nhân viên cần theo dõi</span>
+            <span><i style="background:#2EAD6B"></i>Xanh: xử lý tốt hơn</span>
+            <span><i style="background:#D92D20"></i>Đỏ: cần cải thiện</span>
+          </div>
         </article>
         <article class="panel">
           <div class="panel-head">
             <div>
-              <h3>Leaderboard Agent</h3>
-              <p>Sắp xếp theo SLA đúng hạn.</p>
+              <h3>Bảng xếp hạng nhân viên</h3>
+              <p>Sắp xếp theo tỷ lệ xử lý đúng hạn, nhưng cần đọc cùng với số lượng ticket.</p>
             </div>
-            <span class="tag green">Table</span>
+            <span class="tag green">Bảng</span>
           </div>
           <div class="table-wrap">
             <table class="data-table" id="agentTable"></table>
           </div>
+          <p class="panel-note">Các nhân viên có số ticket quá thấp cần được đọc thận trọng vì mẫu dữ liệu nhỏ. Việc đánh giá hiệu suất nên kết hợp thêm loại dịch vụ xử lý và độ phức tạp của ticket.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="recommendations">
+      <div class="section-head">
+        <h2>Đề xuất cải tiến từ góc độ phân tích trải nghiệm khách hàng</h2>
+        <p>Các đề xuất dưới đây tập trung vào giảm trễ từ gốc, cải thiện khả năng theo dõi hệ thống và bổ sung dữ liệu để tìm nguyên nhân rõ hơn.</p>
+      </div>
+      <div class="proposal-grid">
+        <article class="proposal-card">
+          <strong>Ưu tiên xử lý theo mức độ tác động</strong>
+          <p>Thiết lập hàng đợi riêng cho các dịch vụ có điểm ưu tiên cao. Ticket sắp trễ hoặc đã trễ lâu cần được cảnh báo sớm và chuyển lên cấp xử lý cao hơn.</p>
+        </article>
+        <article class="proposal-card">
+          <strong>Phân bổ nhân sự theo dự báo ticket</strong>
+          <p>Phân bổ nhân viên dựa trên xu hướng ticket theo tuần và theo dịch vụ. Nhân viên xử lý nhiều dịch vụ khó nên được so sánh trong cùng nhóm dịch vụ.</p>
+        </article>
+        <article class="proposal-card">
+          <strong>Theo dõi xử lý theo thời gian thực</strong>
+          <p>Xây dựng màn hình theo dõi ticket sắp trễ, ticket trễ trên 1 ngày, dịch vụ có tỷ lệ trễ tăng bất thường và lượng ticket tồn đọng theo nhân viên.</p>
+        </article>
+        <article class="proposal-card">
+          <strong>Bổ sung lý do phát sinh ticket</strong>
+          <p>Mỗi ticket nên có mã lý do rõ ràng như lỗi sản phẩm, chờ đối tác, thiếu thông tin, chờ khách hàng, lỗi thanh toán hoặc lỗi kết nối.</p>
+        </article>
+        <article class="proposal-card">
+          <strong>Theo dõi thêm chỉ số trải nghiệm</strong>
+          <p>Bổ sung các chỉ số như tỷ lệ khách hàng liên hệ lại, tỷ lệ ticket bị mở lại, thời gian tồn đọng của ticket và mức độ nỗ lực của khách hàng để được hỗ trợ.</p>
+        </article>
+        <article class="proposal-card">
+          <strong>Kết nối ticket với hành vi khách hàng trong ứng dụng</strong>
+          <p>Khi ticket tăng bất thường, đội phân tích cần truy ngược lại màn hình, bước giao dịch hoặc lỗi kỹ thuật đang gây ra vấn đề để giảm ticket từ gốc.</p>
         </article>
       </div>
     </section>
 
     <section class="section" id="ai">
       <div class="section-head">
-        <p class="eyebrow">Phần C</p>
-        <h2>AI Voice of Customer</h2>
-        <p>Pain Score được tính lại bằng tín hiệu tiêu cực và khẩn cấp trong nội dung phản hồi.</p>
+        <h2>Khách hàng đang muốn MoMo cải thiện điều gì?</h2>
+        <p>Phân tích phản hồi khách hàng bằng trí tuệ nhân tạo</p>
+      </div>
+      <div class="analysis-card">
+        <p>Phản hồi của khách hàng là dữ liệu văn bản tự nhiên, chứa nhiều tín hiệu quan trọng nhưng khó phân tích thủ công. Báo cáo sử dụng trí tuệ nhân tạo để nhóm các phản hồi có nội dung gần nhau thành từng chủ đề và chấm điểm mức độ bức xúc.</p>
+        <p>Kết quả cho thấy phản hồi khách hàng tập trung vào hai hướng rõ rệt. Một bên là các vấn đề cần xử lý ngay: ứng dụng bị lag, chậm, không ổn định và quy trình gọi điện hoặc nhắc nợ gây khó chịu. Bên còn lại là cơ hội phát triển sản phẩm: khách hàng muốn có thêm game, nhiệm vụ, xu và phần thưởng.</p>
+        <p>Điểm đáng chú ý là hai hướng này có thể tác động ngược chiều nhau. MoMo đang có cơ hội giữ chân khách hàng bằng các tính năng giải trí, nhưng cơ hội đó sẽ bị suy giảm nếu ứng dụng tiếp tục chậm, lag hoặc khách hàng cảm thấy bị làm phiền bởi quy trình liên hệ thiếu chuẩn mực.</p>
       </div>
       <div class="grid two">
         <article class="panel">
           <div class="panel-head">
             <div>
-              <h3>Priority theo chủ đề</h3>
-              <p>Ưu tiên AI corrected score.</p>
+              <h3>Chủ đề cần ưu tiên xử lý</h3>
+              <p>Điểm ưu tiên được tính từ số lượng phản hồi và mức độ bức xúc của khách hàng.</p>
             </div>
-            <span class="tag pink">AI</span>
+            <span class="tag pink">Chủ đề</span>
           </div>
           <div class="chart-box extra"><canvas id="aiPriority"></canvas></div>
+          <div class="chart-legend">
+            <span><i style="background:#D92D20"></i>Đỏ/hồng đậm: cần xử lý sớm</span>
+            <span><i style="background:#2EAD6B"></i>Xanh: cơ hội phát triển</span>
+            <span><i style="background:#D9D9D9"></i>Xám: nhóm theo dõi</span>
+          </div>
         </article>
         <article class="panel">
           <div class="panel-head">
             <div>
-              <h3>AI priority matrix</h3>
-              <p>X: số phản hồi, Y: pain score.</p>
+              <h3>Ma trận phản hồi khách hàng</h3>
+              <p>Trục ngang là số lượng phản hồi. Trục dọc là mức độ bức xúc. Điểm càng lớn thì càng cần ưu tiên.</p>
             </div>
-            <span class="tag red">Pain</span>
+            <span class="tag red">Mức bức xúc</span>
           </div>
           <div class="chart-box extra"><canvas id="aiMatrix"></canvas></div>
+          <div class="chart-legend">
+            <span><i style="background:#F3D9E8"></i>Vùng nền hồng: nhiều phản hồi và bức xúc cao</span>
+            <span><i style="background:#A50064"></i>Kích thước điểm thể hiện điểm ưu tiên</span>
+          </div>
         </article>
       </div>
       <article class="panel">
         <div class="panel-head">
           <div>
-            <h3>Voice of Customer nổi bật</h3>
-            <p>Top phản hồi có Pain Score cao nhất.</p>
+            <h3>Phản hồi khách hàng nổi bật</h3>
+            <p>Các phản hồi có mức độ bức xúc cao nhất, giúp hiểu rõ ngữ cảnh phía sau số liệu.</p>
           </div>
-          <span class="tag amber">VOC</span>
+          <span class="tag amber">Phản hồi</span>
         </div>
         <div class="quote-grid" id="vocGrid"></div>
       </article>
@@ -229,25 +365,132 @@
 
     <section class="section" id="deep-dive">
       <div class="section-head">
-        <p class="eyebrow">Deep Dive</p>
-        <h2>Phân tích cụm phản hồi</h2>
-        <p>Mỗi cụm hiển thị volume, pain trung bình, trích dẫn tiêu biểu và mẫu vấn đề để đọc nhanh ngữ cảnh.</p>
+        <h2 class="pink-heading">Lắng nghe những gì khách hàng thực sự nói</h2>
+        <p>Biểu đồ phía trên cho biết vấn đề nào đang cần ưu tiên, nhưng các con số chỉ là điểm bắt đầu. Để hiểu rõ hơn, cần nhìn vào chính những gì khách hàng đã trải qua khi sử dụng MoMo.</p>
+      </div>
+      <div class="analysis-card">
+        <p>Mỗi phản hồi không chỉ là một dòng dữ liệu. Đó là một tình huống thật, một cảm xúc thật và đôi khi là dấu hiệu cho thấy một quy trình đang làm khách hàng mất niềm tin.</p>
+        <p><strong>Hiệu năng ứng dụng (Cụm 6: Lag / Chậm / Cải)</strong> cho thấy khách hàng đang gặp vấn đề với tốc độ và độ ổn định của ứng dụng. Với một ứng dụng thanh toán, cảm giác nhanh, mượt và đáng tin cậy là yếu tố rất quan trọng.</p>
+        <p><strong>Quy trình nhắc nợ &amp; liên hệ (Cụm 0: Gọi / Điện / Thoại)</strong> phản ánh rủi ro lớn về niềm tin thương hiệu. Những phản hồi về gọi nhiều lần, gây áp lực, liên hệ chưa đúng thời điểm hoặc liên hệ người thân cần được kiểm soát nghiêm túc hơn.</p>
+        <p><strong>Trải nghiệm trò chơi &amp; game (Cụm 2: Trò chơi / Xu / Game)</strong> và <strong>Chương trình tích xu &amp; nhiệm vụ (Cụm 11: Xu / Nhiệm vụ / Tích xu)</strong> là nhóm thể hiện cơ hội tăng gắn kết nếu trải nghiệm được thiết kế nhẹ, dễ tìm và không làm ứng dụng chậm hơn.</p>
       </div>
       <div class="cluster-list" id="clusterList"></div>
     </section>
 
-    <section class="section compact">
+    <section class="section narrative-section" id="conclusion">
       <div class="section-head">
-        <p class="eyebrow">MoMo Design Tokens</p>
-        <h2>Bảng màu sử dụng trong dashboard</h2>
+        <h2 class="pink-heading">Bài học rút ra từ dữ liệu</h2>
       </div>
-      <div class="swatch-grid" id="swatchGrid"></div>
+      <div class="analysis-card">
+        <p><strong>Thứ nhất, vận hành đang chịu áp lực lớn.</strong> Tỷ lệ xử lý trễ cao không chỉ phản ánh thiếu nguồn lực, mà còn cho thấy một số dịch vụ đang bị nghẽn trong quy trình xử lý. Nếu không có hàng đợi ưu tiên và cảnh báo sớm, các ticket quan trọng sẽ tiếp tục bị xử lý muộn, làm trải nghiệm khách hàng xấu đi.</p>
+        <p><strong>Thứ hai, một phần nguyên nhân nằm ở sản phẩm và quy trình.</strong> Không thể chỉ xem đây là vấn đề của đội chăm sóc khách hàng. Khi ứng dụng bị lag, khi khách hàng bị gọi nhiều lần, hoặc khi quy trình nhắc nợ khiến họ cảm thấy bị làm phiền, thì việc tăng thêm người xử lý ticket chỉ giúp giảm tải tạm thời.</p>
+        <p><strong>Thứ ba, vẫn có cơ hội tăng gắn kết khách hàng.</strong> Các phản hồi về trò chơi, xu, nhiệm vụ và phần thưởng cho thấy khách hàng vẫn có hứng thú với hệ sinh thái tương tác của MoMo. Đây là cơ hội để tăng mức độ gắn bó, miễn là trải nghiệm được thiết kế nhẹ, dễ tìm, dễ chơi và không làm ảnh hưởng đến hiệu năng ứng dụng.</p>
+      </div>
+    </section>
+
+    <section class="section" id="solution-plan">
+      <div class="section-head">
+        <h2 class="pink-heading">Đề xuất giải pháp</h2>
+        <p>Dữ liệu cho thấy MoMo đang đối mặt với hai nhóm vấn đề song song: áp lực vận hành và áp lực trải nghiệm.</p>
+      </div>
+      <div class="analysis-card">
+        <p><strong>Áp lực vận hành:</strong> Tỷ lệ ticket xử lý trễ cao, tập trung tại các dịch vụ Điện, Mua mã thẻ, Nạp tiền, Nạp data và Mua sim.</p>
+        <p><strong>Áp lực trải nghiệm:</strong> Khách hàng phản ánh ứng dụng bị lag/chậm và quy trình liên hệ, nhắc nợ gây bức xúc.</p>
+        <p><strong>Hướng xử lý:</strong> Không chỉ tăng nhân sự, mà cần xử lý đồng thời 3 lớp: giảm trễ vận hành, giảm lỗi sản phẩm và chuẩn hóa quy trình niềm tin.</p>
+      </div>
+      <div class="solution-grid">
+        <article class="solution-card">
+          <strong>1. Giảm trễ trong vận hành bằng hàng đợi ưu tiên</strong>
+          <p><b>Vấn đề:</b> 3.019 ticket trễ, chiếm 58,2% tổng số. Nếu xử lý theo thứ tự thông thường, các ticket quan trọng sẽ tiếp tục bị trễ.</p>
+          <p><b>Giải pháp:</b> Thiết lập hàng đợi ưu tiên theo điểm ưu tiên xử lý cho các nhóm Điện, Mua mã thẻ, Nạp tiền, Nạp data và Mua sim.</p>
+          <ul>
+            <li>Phân loại nhóm sắp trễ và trễ nghiêm trọng.</li>
+            <li>Cảnh báo tự động trước khi vượt cam kết.</li>
+            <li>Chuyển ticket trễ trên 1 ngày lên cấp xử lý cao hơn.</li>
+            <li>Ưu tiên trước các ticket liên quan đến tiền và giao dịch.</li>
+          </ul>
+          <p class="metric-note">Chỉ số: tỷ lệ xử lý đúng hạn, số ticket trễ, thời gian trễ trung bình.</p>
+        </article>
+        <article class="solution-card">
+          <strong>2. Tối ưu nhóm dịch vụ thanh toán tiện ích</strong>
+          <p><b>Vấn đề:</b> Dịch vụ Điện có thời gian trễ trung bình dài nhất; Mua mã thẻ, Nạp tiền và Nạp data có khối lượng ticket quá lớn.</p>
+          <p><b>Giải pháp:</b> Thiết kế quy trình xử lý riêng cho nhóm dịch vụ rủi ro cao và xác định nguyên nhân gốc.</p>
+          <ul>
+            <li>Rà soát dịch vụ ưu tiên cao.</li>
+            <li>Bổ sung mã lý do phát sinh ticket.</li>
+            <li>Tách nguyên nhân: lỗi sản phẩm, lỗi đối tác, chờ đối soát.</li>
+            <li>Thống nhất lại thời gian phản hồi với các đối tác liên quan.</li>
+          </ul>
+          <p class="metric-note">Chỉ số: thời gian xử lý trung bình và số ticket lặp lại theo dịch vụ.</p>
+        </article>
+        <article class="solution-card">
+          <strong>3. Phân bổ nhân sự theo khối lượng và độ khó</strong>
+          <p><b>Vấn đề:</b> Nhân sự xử lý nhiều ticket hoặc dịch vụ khó dễ bị trễ hơn, nhưng không thể đánh giá họ kém năng lực chỉ dựa trên tỷ lệ trễ trung bình.</p>
+          <p><b>Giải pháp:</b> Đánh giá nhân viên theo bối cảnh nhóm dịch vụ và độ khó, đồng thời phân bổ lại công việc để tránh quá tải.</p>
+          <ul>
+            <li>Chia hiệu suất theo nhóm dịch vụ.</li>
+            <li>Phân bổ nhân sự dựa trên volume dự báo.</li>
+            <li>Huấn luyện cho nhóm có tỷ lệ trễ cao nhưng có khối lượng xử lý lớn.</li>
+          </ul>
+          <p class="metric-note">Chỉ số: hiệu suất theo nhân viên và theo từng nhóm dịch vụ.</p>
+        </article>
+        <article class="solution-card">
+          <strong>4. Cải thiện hiệu năng để giảm ticket từ gốc</strong>
+          <p><b>Vấn đề:</b> Phản hồi lag, chậm là điểm đau lớn nhất, ảnh hưởng trực tiếp đến niềm tin vào ứng dụng thanh toán.</p>
+          <p><b>Giải pháp:</b> Thành lập nhóm chuyên trách xử lý hiệu năng, đo lường tốc độ tại từng bước giao dịch.</p>
+          <ul>
+            <li>Đo tốc độ mở ứng dụng và tải màn hình.</li>
+            <li>Tối ưu trải nghiệm cho thiết bị cấu hình thấp.</li>
+            <li>Kết nối dữ liệu lỗi kỹ thuật với dữ liệu ticket để truy vết nguyên nhân.</li>
+          </ul>
+          <p class="metric-note">Chỉ số: tỷ lệ lỗi, thời gian tải màn hình, số ticket phát sinh sau lỗi kỹ thuật.</p>
+        </article>
+        <article class="solution-card">
+          <strong>5. Chuẩn hóa quy trình nhắc nợ</strong>
+          <p><b>Vấn đề:</b> Phản hồi về nhắc nợ, gọi làm phiền, liên hệ người thân gây rủi ro lớn cho thương hiệu.</p>
+          <p><b>Giải pháp:</b> Thiết lập bộ quy tắc kiểm soát tần suất, thời điểm và kịch bản liên hệ.</p>
+          <ul>
+            <li>Ngắt nhắc nợ ngay khi khách hàng đã thanh toán.</li>
+            <li>Giới hạn số lần gọi trong ngày hoặc tuần.</li>
+            <li>Gắn cờ rủi ro cho các phản hồi từ khóa nhạy cảm như xã hội đen, đe dọa.</li>
+          </ul>
+          <p class="metric-note">Chỉ số: số phản hồi về làm phiền, tỷ lệ khiếu nại liên quan đến người thân.</p>
+        </article>
+        <article class="solution-card">
+          <strong>6. Tận dụng cơ hội từ gamification</strong>
+          <p><b>Vấn đề:</b> Khách hàng yêu thích game/xu nhưng trải nghiệm hiện tại có thể làm ứng dụng nặng hơn.</p>
+          <p><b>Giải pháp:</b> Phát triển tính năng giải trí theo hướng nhẹ, dễ tìm, không làm ảnh hưởng hiệu năng ứng dụng.</p>
+          <ul>
+            <li>Thiết kế lại game theo hướng đơn giản và dễ tham gia.</li>
+            <li>Tối ưu code để chạy mượt hơn.</li>
+            <li>Gắn nhiệm vụ với các hành vi thanh toán có giá trị.</li>
+          </ul>
+          <p class="metric-note">Chỉ số: số người tham gia game, tỷ lệ hoàn thành nhiệm vụ, số phản hồi tiêu cực về lag khi chơi game.</p>
+        </article>
+        <article class="solution-card wide">
+          <strong>7. Xây dựng lớp dữ liệu kết nối</strong>
+          <p><b>Vấn đề:</b> Ticket và phản hồi đang tách biệt, khó truy ngược nguyên nhân gốc.</p>
+          <p><b>Giải pháp:</b> Xây dựng hệ thống nối ticket, hành vi trong ứng dụng và phản hồi khách hàng.</p>
+          <ul>
+            <li>Gắn nhãn phản hồi.</li>
+            <li>Đồng bộ mã lý do vào ticket.</li>
+            <li>Xây dựng dashboard theo dõi thời gian thực.</li>
+          </ul>
+          <div class="roadmap">
+            <p><strong>Giai đoạn 1 (0-30 ngày):</strong> Ưu tiên chữa cháy, thiết lập hàng đợi, chặn lỗi nhắc nợ/thanh toán.</p>
+            <p><strong>Giai đoạn 2 (31-60 ngày):</strong> Chuẩn hóa mã lý do, tối ưu quy trình xử lý, ổn định nhân sự.</p>
+            <p><strong>Giai đoạn 3 (61-90 ngày):</strong> Kết nối dữ liệu hành vi, tối ưu hiệu năng ứng dụng, cải thiện trải nghiệm game/xu.</p>
+          </div>
+          <p class="metric-note">Kết luận: tập trung vào giảm lý do khiến khách hàng phải tạo ticket thay vì chỉ xử lý nhiều ticket hơn. Kết nối dữ liệu vận hành, sản phẩm và phản hồi là chìa khóa để chuyển từ xử lý sự cố sang ngăn chặn sự cố.</p>
+        </article>
+      </div>
     </section>
   </main>
 
   <footer>
     <strong>MoMo CX Talent Dashboard</strong>
-    <span>HTML frontend · Chart.js · dữ liệu từ Excel/CSV local</span>
+    <span>· dữ liệu xử lý từ Excel/CSV local</span>
+    <span class="footer-build" id="generatedAt">· đang tải thời gian cập nhật</span>
   </footer>
 </body>
 </html>

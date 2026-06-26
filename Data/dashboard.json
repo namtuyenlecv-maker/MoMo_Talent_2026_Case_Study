@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-26T11:33:06",
+  "generated_at": "2026-06-26T14:24:46",
   "source_files": {
     "metrics": "CX_MoMo_Data_Metrics.xlsx",
     "insights": "CX_MoMo_AI_Insights.xlsx",
@@ -3393,6 +3393,548 @@
       "Created_weekday": "Sunday",
       "Total_ticket": 644,
       "Late_ticket": 385
+    }
+  ],
+  "weekly_weekday": [
+    {
+      "Created_week": "2026-W01",
+      "Created_weekday": "Thursday",
+      "Total_ticket": 98,
+      "Late_ticket": 80
+    },
+    {
+      "Created_week": "2026-W01",
+      "Created_weekday": "Friday",
+      "Total_ticket": 66,
+      "Late_ticket": 30
+    },
+    {
+      "Created_week": "2026-W01",
+      "Created_weekday": "Saturday",
+      "Total_ticket": 67,
+      "Late_ticket": 35
+    },
+    {
+      "Created_week": "2026-W01",
+      "Created_weekday": "Sunday",
+      "Total_ticket": 68,
+      "Late_ticket": 42
+    },
+    {
+      "Created_week": "2026-W02",
+      "Created_weekday": "Monday",
+      "Total_ticket": 86,
+      "Late_ticket": 62
+    },
+    {
+      "Created_week": "2026-W02",
+      "Created_weekday": "Tuesday",
+      "Total_ticket": 63,
+      "Late_ticket": 44
+    },
+    {
+      "Created_week": "2026-W02",
+      "Created_weekday": "Wednesday",
+      "Total_ticket": 77,
+      "Late_ticket": 49
+    },
+    {
+      "Created_week": "2026-W02",
+      "Created_weekday": "Thursday",
+      "Total_ticket": 70,
+      "Late_ticket": 44
+    },
+    {
+      "Created_week": "2026-W02",
+      "Created_weekday": "Friday",
+      "Total_ticket": 71,
+      "Late_ticket": 39
+    },
+    {
+      "Created_week": "2026-W02",
+      "Created_weekday": "Saturday",
+      "Total_ticket": 48,
+      "Late_ticket": 23
+    },
+    {
+      "Created_week": "2026-W02",
+      "Created_weekday": "Sunday",
+      "Total_ticket": 39,
+      "Late_ticket": 28
+    },
+    {
+      "Created_week": "2026-W03",
+      "Created_weekday": "Monday",
+      "Total_ticket": 75,
+      "Late_ticket": 45
+    },
+    {
+      "Created_week": "2026-W03",
+      "Created_weekday": "Tuesday",
+      "Total_ticket": 67,
+      "Late_ticket": 24
+    },
+    {
+      "Created_week": "2026-W03",
+      "Created_weekday": "Wednesday",
+      "Total_ticket": 49,
+      "Late_ticket": 25
+    },
+    {
+      "Created_week": "2026-W03",
+      "Created_weekday": "Thursday",
+      "Total_ticket": 74,
+      "Late_ticket": 43
+    },
+    {
+      "Created_week": "2026-W03",
+      "Created_weekday": "Friday",
+      "Total_ticket": 92,
+      "Late_ticket": 31
+    },
+    {
+      "Created_week": "2026-W03",
+      "Created_weekday": "Saturday",
+      "Total_ticket": 56,
+      "Late_ticket": 16
+    },
+    {
+      "Created_week": "2026-W03",
+      "Created_weekday": "Sunday",
+      "Total_ticket": 73,
+      "Late_ticket": 20
+    },
+    {
+      "Created_week": "2026-W04",
+      "Created_weekday": "Monday",
+      "Total_ticket": 66,
+      "Late_ticket": 26
+    },
+    {
+      "Created_week": "2026-W04",
+      "Created_weekday": "Tuesday",
+      "Total_ticket": 53,
+      "Late_ticket": 30
+    },
+    {
+      "Created_week": "2026-W04",
+      "Created_weekday": "Wednesday",
+      "Total_ticket": 48,
+      "Late_ticket": 34
+    },
+    {
+      "Created_week": "2026-W04",
+      "Created_weekday": "Thursday",
+      "Total_ticket": 44,
+      "Late_ticket": 28
+    },
+    {
+      "Created_week": "2026-W04",
+      "Created_weekday": "Friday",
+      "Total_ticket": 45,
+      "Late_ticket": 19
+    },
+    {
+      "Created_week": "2026-W04",
+      "Created_weekday": "Saturday",
+      "Total_ticket": 39,
+      "Late_ticket": 22
+    },
+    {
+      "Created_week": "2026-W04",
+      "Created_weekday": "Sunday",
+      "Total_ticket": 37,
+      "Late_ticket": 22
+    },
+    {
+      "Created_week": "2026-W05",
+      "Created_weekday": "Monday",
+      "Total_ticket": 55,
+      "Late_ticket": 33
+    },
+    {
+      "Created_week": "2026-W05",
+      "Created_weekday": "Tuesday",
+      "Total_ticket": 43,
+      "Late_ticket": 34
+    },
+    {
+      "Created_week": "2026-W05",
+      "Created_weekday": "Wednesday",
+      "Total_ticket": 58,
+      "Late_ticket": 30
+    },
+    {
+      "Created_week": "2026-W05",
+      "Created_weekday": "Thursday",
+      "Total_ticket": 52,
+      "Late_ticket": 22
+    },
+    {
+      "Created_week": "2026-W05",
+      "Created_weekday": "Friday",
+      "Total_ticket": 46,
+      "Late_ticket": 16
+    },
+    {
+      "Created_week": "2026-W05",
+      "Created_weekday": "Saturday",
+      "Total_ticket": 43,
+      "Late_ticket": 14
+    },
+    {
+      "Created_week": "2026-W05",
+      "Created_weekday": "Sunday",
+      "Total_ticket": 47,
+      "Late_ticket": 24
+    },
+    {
+      "Created_week": "2026-W06",
+      "Created_weekday": "Monday",
+      "Total_ticket": 60,
+      "Late_ticket": 41
+    },
+    {
+      "Created_week": "2026-W06",
+      "Created_weekday": "Tuesday",
+      "Total_ticket": 59,
+      "Late_ticket": 35
+    },
+    {
+      "Created_week": "2026-W06",
+      "Created_weekday": "Wednesday",
+      "Total_ticket": 69,
+      "Late_ticket": 33
+    },
+    {
+      "Created_week": "2026-W06",
+      "Created_weekday": "Thursday",
+      "Total_ticket": 50,
+      "Late_ticket": 22
+    },
+    {
+      "Created_week": "2026-W06",
+      "Created_weekday": "Friday",
+      "Total_ticket": 61,
+      "Late_ticket": 31
+    },
+    {
+      "Created_week": "2026-W06",
+      "Created_weekday": "Saturday",
+      "Total_ticket": 50,
+      "Late_ticket": 22
+    },
+    {
+      "Created_week": "2026-W06",
+      "Created_weekday": "Sunday",
+      "Total_ticket": 47,
+      "Late_ticket": 32
+    },
+    {
+      "Created_week": "2026-W07",
+      "Created_weekday": "Monday",
+      "Total_ticket": 57,
+      "Late_ticket": 42
+    },
+    {
+      "Created_week": "2026-W07",
+      "Created_weekday": "Tuesday",
+      "Total_ticket": 42,
+      "Late_ticket": 28
+    },
+    {
+      "Created_week": "2026-W07",
+      "Created_weekday": "Wednesday",
+      "Total_ticket": 49,
+      "Late_ticket": 36
+    },
+    {
+      "Created_week": "2026-W07",
+      "Created_weekday": "Thursday",
+      "Total_ticket": 66,
+      "Late_ticket": 40
+    },
+    {
+      "Created_week": "2026-W07",
+      "Created_weekday": "Friday",
+      "Total_ticket": 57,
+      "Late_ticket": 25
+    },
+    {
+      "Created_week": "2026-W07",
+      "Created_weekday": "Saturday",
+      "Total_ticket": 45,
+      "Late_ticket": 19
+    },
+    {
+      "Created_week": "2026-W07",
+      "Created_weekday": "Sunday",
+      "Total_ticket": 27,
+      "Late_ticket": 14
+    },
+    {
+      "Created_week": "2026-W08",
+      "Created_weekday": "Monday",
+      "Total_ticket": 40,
+      "Late_ticket": 20
+    },
+    {
+      "Created_week": "2026-W08",
+      "Created_weekday": "Tuesday",
+      "Total_ticket": 39,
+      "Late_ticket": 21
+    },
+    {
+      "Created_week": "2026-W08",
+      "Created_weekday": "Wednesday",
+      "Total_ticket": 28,
+      "Late_ticket": 18
+    },
+    {
+      "Created_week": "2026-W08",
+      "Created_weekday": "Thursday",
+      "Total_ticket": 35,
+      "Late_ticket": 23
+    },
+    {
+      "Created_week": "2026-W08",
+      "Created_weekday": "Friday",
+      "Total_ticket": 35,
+      "Late_ticket": 18
+    },
+    {
+      "Created_week": "2026-W08",
+      "Created_weekday": "Saturday",
+      "Total_ticket": 38,
+      "Late_ticket": 17
+    },
+    {
+      "Created_week": "2026-W08",
+      "Created_weekday": "Sunday",
+      "Total_ticket": 33,
+      "Late_ticket": 19
+    },
+    {
+      "Created_week": "2026-W09",
+      "Created_weekday": "Monday",
+      "Total_ticket": 52,
+      "Late_ticket": 27
+    },
+    {
+      "Created_week": "2026-W09",
+      "Created_weekday": "Tuesday",
+      "Total_ticket": 71,
+      "Late_ticket": 49
+    },
+    {
+      "Created_week": "2026-W09",
+      "Created_weekday": "Wednesday",
+      "Total_ticket": 58,
+      "Late_ticket": 32
+    },
+    {
+      "Created_week": "2026-W09",
+      "Created_weekday": "Thursday",
+      "Total_ticket": 63,
+      "Late_ticket": 34
+    },
+    {
+      "Created_week": "2026-W09",
+      "Created_weekday": "Friday",
+      "Total_ticket": 65,
+      "Late_ticket": 31
+    },
+    {
+      "Created_week": "2026-W09",
+      "Created_weekday": "Saturday",
+      "Total_ticket": 42,
+      "Late_ticket": 25
+    },
+    {
+      "Created_week": "2026-W09",
+      "Created_weekday": "Sunday",
+      "Total_ticket": 39,
+      "Late_ticket": 20
+    },
+    {
+      "Created_week": "2026-W10",
+      "Created_weekday": "Monday",
+      "Total_ticket": 59,
+      "Late_ticket": 38
+    },
+    {
+      "Created_week": "2026-W10",
+      "Created_weekday": "Tuesday",
+      "Total_ticket": 56,
+      "Late_ticket": 44
+    },
+    {
+      "Created_week": "2026-W10",
+      "Created_weekday": "Wednesday",
+      "Total_ticket": 68,
+      "Late_ticket": 44
+    },
+    {
+      "Created_week": "2026-W10",
+      "Created_weekday": "Thursday",
+      "Total_ticket": 69,
+      "Late_ticket": 43
+    },
+    {
+      "Created_week": "2026-W10",
+      "Created_weekday": "Friday",
+      "Total_ticket": 67,
+      "Late_ticket": 29
+    },
+    {
+      "Created_week": "2026-W10",
+      "Created_weekday": "Saturday",
+      "Total_ticket": 36,
+      "Late_ticket": 21
+    },
+    {
+      "Created_week": "2026-W10",
+      "Created_weekday": "Sunday",
+      "Total_ticket": 59,
+      "Late_ticket": 42
+    },
+    {
+      "Created_week": "2026-W11",
+      "Created_weekday": "Monday",
+      "Total_ticket": 72,
+      "Late_ticket": 59
+    },
+    {
+      "Created_week": "2026-W11",
+      "Created_weekday": "Tuesday",
+      "Total_ticket": 54,
+      "Late_ticket": 40
+    },
+    {
+      "Created_week": "2026-W11",
+      "Created_weekday": "Wednesday",
+      "Total_ticket": 63,
+      "Late_ticket": 41
+    },
+    {
+      "Created_week": "2026-W11",
+      "Created_weekday": "Thursday",
+      "Total_ticket": 72,
+      "Late_ticket": 30
+    },
+    {
+      "Created_week": "2026-W11",
+      "Created_weekday": "Friday",
+      "Total_ticket": 96,
+      "Late_ticket": 52
+    },
+    {
+      "Created_week": "2026-W11",
+      "Created_weekday": "Saturday",
+      "Total_ticket": 53,
+      "Late_ticket": 26
+    },
+    {
+      "Created_week": "2026-W11",
+      "Created_weekday": "Sunday",
+      "Total_ticket": 53,
+      "Late_ticket": 32
+    },
+    {
+      "Created_week": "2026-W12",
+      "Created_weekday": "Monday",
+      "Total_ticket": 101,
+      "Late_ticket": 54
+    },
+    {
+      "Created_week": "2026-W12",
+      "Created_weekday": "Tuesday",
+      "Total_ticket": 109,
+      "Late_ticket": 75
+    },
+    {
+      "Created_week": "2026-W12",
+      "Created_weekday": "Wednesday",
+      "Total_ticket": 72,
+      "Late_ticket": 44
+    },
+    {
+      "Created_week": "2026-W12",
+      "Created_weekday": "Thursday",
+      "Total_ticket": 68,
+      "Late_ticket": 47
+    },
+    {
+      "Created_week": "2026-W12",
+      "Created_weekday": "Friday",
+      "Total_ticket": 64,
+      "Late_ticket": 32
+    },
+    {
+      "Created_week": "2026-W12",
+      "Created_weekday": "Saturday",
+      "Total_ticket": 67,
+      "Late_ticket": 32
+    },
+    {
+      "Created_week": "2026-W12",
+      "Created_weekday": "Sunday",
+      "Total_ticket": 84,
+      "Late_ticket": 60
+    },
+    {
+      "Created_week": "2026-W13",
+      "Created_weekday": "Monday",
+      "Total_ticket": 68,
+      "Late_ticket": 51
+    },
+    {
+      "Created_week": "2026-W13",
+      "Created_weekday": "Tuesday",
+      "Total_ticket": 60,
+      "Late_ticket": 37
+    },
+    {
+      "Created_week": "2026-W13",
+      "Created_weekday": "Wednesday",
+      "Total_ticket": 51,
+      "Late_ticket": 32
+    },
+    {
+      "Created_week": "2026-W13",
+      "Created_weekday": "Thursday",
+      "Total_ticket": 53,
+      "Late_ticket": 40
+    },
+    {
+      "Created_week": "2026-W13",
+      "Created_weekday": "Friday",
+      "Total_ticket": 33,
+      "Late_ticket": 18
+    },
+    {
+      "Created_week": "2026-W13",
+      "Created_weekday": "Saturday",
+      "Total_ticket": 39,
+      "Late_ticket": 35
+    },
+    {
+      "Created_week": "2026-W13",
+      "Created_weekday": "Sunday",
+      "Total_ticket": 38,
+      "Late_ticket": 30
+    },
+    {
+      "Created_week": "2026-W14",
+      "Created_weekday": "Monday",
+      "Total_ticket": 60,
+      "Late_ticket": 44
+    },
+    {
+      "Created_week": "2026-W14",
+      "Created_weekday": "Tuesday",
+      "Total_ticket": 51,
+      "Late_ticket": 39
     }
   ],
   "ai_topics_original": [

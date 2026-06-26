@@ -179,6 +179,15 @@ def make_dashboard_data() -> dict[str, Any]:
     by_weekday["order"] = by_weekday["Created_weekday"].map({day: i for i, day in enumerate(weekday_order)})
     by_weekday = by_weekday.sort_values("order").drop(columns=["order"])
 
+    by_week_weekday = (
+        master.groupby(["Created_week", "Created_weekday"], as_index=False)
+        .agg(Total_ticket=("Ticket_id", "count"), Late_ticket=("Is_Late", "sum"))
+    )
+    by_week_weekday["order"] = by_week_weekday["Created_weekday"].map(
+        {day: i for i, day in enumerate(weekday_order)}
+    )
+    by_week_weekday = by_week_weekday.sort_values(["Created_week", "order"]).drop(columns=["order"])
+
     top_service_names = services.head(10)["Level"].tolist()
     weekly_service_top = weekly_service[weekly_service["Level"].isin(top_service_names)]
 
@@ -204,6 +213,7 @@ def make_dashboard_data() -> dict[str, Any]:
         "agents": records(agents),
         "top_late": records(top_late, 20),
         "weekday": records(by_weekday),
+        "weekly_weekday": records(by_week_weekday),
         "ai_topics_original": records(ai_topics_raw),
         "ai_topics": records(ai_summary),
         "voc": records(
