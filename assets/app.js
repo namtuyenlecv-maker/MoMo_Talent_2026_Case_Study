@@ -508,7 +508,7 @@ function renderServiceCharts(data) {
           data: services.map((row) => ({
             x: row.Total_ticket,
             y: row.Avg_delay_minutes / 60,
-            r: 5 + Math.sqrt(row.Priority_Score / maxPriority) * 22,
+            r: bubbleRadius(row.Priority_Score, maxPriority, 4, 12),
             label: row.Level,
             late: row.Late_Rate,
             priority: row.Priority_Score,
@@ -523,6 +523,9 @@ function renderServiceCharts(data) {
         },
       ],
     },
+        layout: {
+          padding: { top: 12, right: 16, bottom: 12, left: 16 },
+        },
     options: chartOptions({
       scales: {
         x: { beginAtZero: true, title: { display: true, text: "Tổng ticket" }, grid: { color: "#F0EDF0" } },
