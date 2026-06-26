@@ -45,8 +45,8 @@ a {
   border-bottom: 1px solid var(--line);
   display: flex;
   gap: 24px;
-  height: 68px;
-  padding: 0 32px;
+  min-height: 88px;
+  padding: 10px 32px;
   position: sticky;
   top: 0;
   z-index: 20;
@@ -56,20 +56,34 @@ a {
 .brand {
   align-items: center;
   display: flex;
-  font-weight: 800;
-  gap: 10px;
+  flex: 0 0 auto;
+  gap: 18px;
   margin-right: auto;
+  min-width: 0;
 }
 
-.brand-mark {
-  background: var(--momo);
-  border-radius: 8px;
-  color: white;
+.brand-logo {
+  display: block;
+  flex: 0 0 auto;
+  height: 68px;
+  object-fit: contain;
+  width: 74px;
+}
+
+.brand-title {
+  align-items: center;
+  background: #fff;
+  border: 2px solid var(--pink-plus);
+  border-radius: 12px;
+  color: #0f0f12;
   display: inline-flex;
-  font-size: 15px;
-  justify-content: center;
-  min-width: 56px;
-  padding: 7px 10px;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 1.08;
+  min-height: 58px;
+  padding: 10px 20px;
+  text-align: center;
+  white-space: nowrap;
 }
 
 .nav-links {
@@ -849,6 +863,16 @@ h1 {
 }
 
 @media (max-width: 1080px) {
+  .topbar {
+    align-items: flex-start;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .brand {
+    margin-right: 0;
+  }
+
   .kpi-grid,
   .quote-grid,
   .method-grid,
@@ -874,12 +898,27 @@ h1 {
 
 @media (max-width: 760px) {
   .topbar {
-    align-items: flex-start;
-    flex-direction: column;
     gap: 10px;
-    height: auto;
     padding: 14px 20px;
     position: static;
+  }
+
+  .brand {
+    gap: 12px;
+    width: 100%;
+  }
+
+  .brand-logo {
+    height: 52px;
+    width: 58px;
+  }
+
+  .brand-title {
+    flex: 1 1 auto;
+    font-size: 16px;
+    min-height: 48px;
+    padding: 8px 12px;
+    white-space: normal;
   }
 
   .nav-links {
