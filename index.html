@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MoMo CX Talent Dashboard</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+  <script defer src="assets/app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#overview" aria-label="MoMo CX dashboard home">
+      <span class="brand-mark">MoMo</span>
+      <span>CX Talent</span>
+    </a>
+    <nav class="nav-links" aria-label="Dashboard sections">
+      <a href="#overview">Tổng quan</a>
+      <a href="#operation">SLA</a>
+      <a href="#services">Dịch vụ</a>
+      <a href="#ai">AI Insight</a>
+      <a href="#deep-dive">Deep dive</a>
+    </nav>
+    <span class="build-chip" id="generatedAt">Đang tải dữ liệu</span>
+  </header>
+
+  <main>
+    <section class="hero" id="overview">
+      <div class="hero-copy">
+        <p class="eyebrow">MoMo CX Case Study</p>
+        <h1>Bảng điều khiển vận hành và Voice of Customer</h1>
+        <p class="hero-text">
+          Dashboard HTML thuần, tính toán từ Excel/CSV đã xử lý, vẽ lại biểu đồ theo bảng màu MoMo 2.0 và tối ưu để review nhanh trên trình duyệt.
+        </p>
+        <div class="hero-actions">
+          <a class="primary-link" href="#operation">Xem SLA</a>
+          <a class="secondary-link" href="#ai">Xem AI insights</a>
+        </div>
+      </div>
+      <div class="brand-panel" aria-label="MoMo brand palette preview">
+        <div class="brand-panel-top">
+          <span>MoMo Trust Display</span>
+          <strong>50k</strong>
+        </div>
+        <div class="palette-strip">
+          <span style="background:#FFEFF4"></span>
+          <span style="background:#FEC8DC"></span>
+          <span style="background:#FF9DBE"></span>
+          <span style="background:#F95396"></span>
+          <span style="background:#A50064"></span>
+        </div>
+        <p>Bảng màu chủ đạo được dùng nhất quán trong KPI, chart, tag trạng thái và highlight rủi ro.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <p class="eyebrow">Executive Summary</p>
+        <h2>KPI tổng quan</h2>
+        <p>Những chỉ số lõi để đọc nhanh sức khỏe hệ thống chăm sóc khách hàng.</p>
+      </div>
+      <div class="kpi-grid" id="kpiGrid"></div>
+    </section>
+
+    <section class="section" id="operation">
+      <div class="section-head">
+        <p class="eyebrow">Phần A</p>
+        <h2>Khối lượng ticket và SLA theo tuần</h2>
+        <p>Cột thể hiện tổng ticket; đường thể hiện SLA đúng hạn và tỷ lệ trễ.</p>
+      </div>
+      <div class="grid two">
+        <article class="panel wide">
+          <div class="panel-head">
+            <div>
+              <h3>Volume x SLA trend</h3>
+              <p>Ticket tăng/giảm theo tuần và chất lượng xử lý tương ứng.</p>
+            </div>
+            <span class="tag pink">Combo</span>
+          </div>
+          <div class="chart-box tall"><canvas id="weeklyCombo"></canvas></div>
+        </article>
+        <article class="panel">
+          <div class="panel-head">
+            <div>
+              <h3>Phân bổ trễ SLA</h3>
+              <p>Không tính nhóm không trễ.</p>
+            </div>
+            <span class="tag amber">Delay</span>
+          </div>
+          <div class="chart-box tall"><canvas id="delayDonut"></canvas></div>
+        </article>
+      </div>
+      <div class="grid two">
+        <article class="panel">
+          <div class="panel-head">
+            <div>
+              <h3>Đúng hạn vs trễ SLA</h3>
+              <p>Stacked bar theo tuần.</p>
+            </div>
+            <span class="tag green">SLA</span>
+          </div>
+          <div class="chart-box"><canvas id="weeklyStack"></canvas></div>
+        </article>
+        <article class="panel">
+          <div class="panel-head">
+            <div>
+              <h3>Ticket theo ngày</h3>
+              <p>Phân bổ khối lượng theo weekday.</p>
+            </div>
+            <span class="tag blue">Volume</span>
+          </div>
+          <div class="chart-box"><canvas id="weekdayBar"></canvas></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="section-head">
+        <p class="eyebrow">Phần B</p>
+        <h2>Dịch vụ ưu tiên và điểm nghẽn</h2>
+        <p>Priority Score kết hợp volume, tỷ lệ trễ, độ trễ trung bình và tác động nghiệp vụ.</p>
+      </div>
+      <div class="grid two">
+        <article class="panel">
+          <div class="panel-head">
+            <div>
+              <h3>Top dịch vụ Priority Score cao</h3>
+              <p>Nhóm cần ưu tiên xử lý trong vận hành.</p>
+            </div>
+            <span class="tag pink">Priority</span>
+          </div>
+          <div class="chart-box extra"><canvas id="servicePriority"></canvas></div>
+        </article>
+        <article class="panel">
+          <div class="panel-head">
+            <div>
+              <h3>Ma trận ưu tiên</h3>
+              <p>X: volume, Y: delay, kích thước: priority.</p>
+            </div>
+            <span class="tag red">Risk</span>
+          </div>
+          <div class="chart-box extra"><canvas id="serviceMatrix"></canvas></div>
+        </article>
+      </div>
+      <article class="panel">
+        <div class="panel-head">
+          <div>
+            <h3>Heatmap SLA theo dịch vụ x tuần</h3>
+            <p>Top 10 dịch vụ theo priority, màu càng đỏ là on-time rate càng thấp.</p>
+          </div>
+          <span class="tag amber">Heatmap</span>
+        </div>
+        <div id="slaHeatmap" class="heatmap" aria-label="Heatmap SLA theo dịch vụ và tuần"></div>
+      </article>
+    </section>
+
+    <section class="section" id="agents">
+      <div class="section-head">
+        <p class="eyebrow">Agent Performance</p>
+        <h2>Hiệu suất xử lý theo nhân viên</h2>
+        <p>So sánh volume, SLA đúng hạn, ticket trễ và độ trễ trung bình.</p>
+      </div>
+      <div class="grid two">
+        <article class="panel">
+          <div class="panel-head">
+            <div>
+              <h3>Agent bubble chart</h3>
+              <p>Kích thước bong bóng phản ánh số ticket xử lý.</p>
+            </div>
+            <span class="tag blue">Agent</span>
+          </div>
+          <div class="chart-box"><canvas id="agentBubble"></canvas></div>
+        </article>
+        <article class="panel">
+          <div class="panel-head">
+            <div>
+              <h3>Leaderboard Agent</h3>
+              <p>Sắp xếp theo SLA đúng hạn.</p>
+            </div>
+            <span class="tag green">Table</span>
+          </div>
+          <div class="table-wrap">
+            <table class="data-table" id="agentTable"></table>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="ai">
+      <div class="section-head">
+        <p class="eyebrow">Phần C</p>
+        <h2>AI Voice of Customer</h2>
+        <p>Pain Score được tính lại bằng tín hiệu tiêu cực và khẩn cấp trong nội dung phản hồi.</p>
+      </div>
+      <div class="grid two">
+        <article class="panel">
+          <div class="panel-head">
+            <div>
+              <h3>Priority theo chủ đề</h3>
+              <p>Ưu tiên AI corrected score.</p>
+            </div>
+            <span class="tag pink">AI</span>
+          </div>
+          <div class="chart-box extra"><canvas id="aiPriority"></canvas></div>
+        </article>
+        <article class="panel">
+          <div class="panel-head">
+            <div>
+              <h3>AI priority matrix</h3>
+              <p>X: số phản hồi, Y: pain score.</p>
+            </div>
+            <span class="tag red">Pain</span>
+          </div>
+          <div class="chart-box extra"><canvas id="aiMatrix"></canvas></div>
+        </article>
+      </div>
+      <article class="panel">
+        <div class="panel-head">
+          <div>
+            <h3>Voice of Customer nổi bật</h3>
+            <p>Top phản hồi có Pain Score cao nhất.</p>
+          </div>
+          <span class="tag amber">VOC</span>
+        </div>
+        <div class="quote-grid" id="vocGrid"></div>
+      </article>
+    </section>
+
+    <section class="section" id="deep-dive">
+      <div class="section-head">
+        <p class="eyebrow">Deep Dive</p>
+        <h2>Phân tích cụm phản hồi</h2>
+        <p>Mỗi cụm hiển thị volume, pain trung bình, trích dẫn tiêu biểu và mẫu vấn đề để đọc nhanh ngữ cảnh.</p>
+      </div>
+      <div class="cluster-list" id="clusterList"></div>
+    </section>
+
+    <section class="section compact">
+      <div class="section-head">
+        <p class="eyebrow">MoMo Design Tokens</p>
+        <h2>Bảng màu sử dụng trong dashboard</h2>
+      </div>
+      <div class="swatch-grid" id="swatchGrid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <strong>MoMo CX Talent Dashboard</strong>
+    <span>HTML frontend · Chart.js · dữ liệu từ Excel/CSV local</span>
+  </footer>
+</body>
+</html>
