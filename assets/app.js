@@ -151,6 +151,7 @@ const fmtShort = (value) => {
 };
 const fmtDecimal = (value, digits = 1) => Number(value || 0).toFixed(digits).replace(".", ",");
 const fmtPct = (value, digits = 1) => `${fmtDecimal(Number(value || 0) * 100, digits)}%`;
+const fmtPainPct = (value, digits = 1) => `${fmtDecimal(Number(value || 0) * 100, digits)}%`;
 const fmtMin = (value) => `${fmtNum(Math.round(Number(value || 0)))} phút`;
 const fmtScore = (value, digits = 1) => fmtDecimal(value, digits);
 const shortLabel = (value, max = 26) => {
@@ -725,7 +726,8 @@ function renderAi(data) {
   const maxPriority = Math.max(...topics.map((row) => row.priority_score_new), 1);
   const topTopics = new Set(topics.slice(0, 7).map((row) => row.topic_label));
   const meanFeedback = topics.reduce((sum, row) => sum + Number(row.total_feedback || 0), 0) / Math.max(topics.length, 1);
-  const meanPain = topics.reduce((sum, row) => sum + Number(row.avg_pain_score || 0), 0) / Math.max(topics.length, 1);
+  const meanPainPct =
+    (topics.reduce((sum, row) => sum + Number(row.avg_pain_score || 0), 0) / Math.max(topics.length, 1)) * 100;
   new Chart(document.querySelector("#aiMatrix"), {
     type: "bubble",
     data: {
@@ -734,11 +736,12 @@ function renderAi(data) {
           label: "Chủ đề phản hồi",
           data: topics.map((row) => ({
             x: row.total_feedback,
-            y: row.avg_pain_score,
+            y: Number(row.avg_pain_score || 0) * 100,
             r: 6 + Math.sqrt(row.priority_score_new / maxPriority) * 24,
             label: row.topic_label,
             group: row.topic_group,
             priority: row.priority_score_new,
+            painRaw: row.avg_pain_score,
             showLabel: topTopics.has(row.topic_label) || row.topic_group === "Nhóm rủi ro cao",
             labelColor: COLORS.ink,
           })),
@@ -753,14 +756,19 @@ function renderAi(data) {
     options: chartOptions({
       scales: {
         x: { beginAtZero: true, title: { display: true, text: "Tổng phản hồi" }, grid: { color: "#F0EDF0" } },
-        y: { beginAtZero: true, title: { display: true, text: "Mức độ bức xúc trung bình" }, grid: { color: "#F0EDF0" } },
+        y: {
+          beginAtZero: true,
+          title: { display: true, text: "Chỉ số bức xúc trung bình (%)" },
+          grid: { color: "#F0EDF0" },
+          ticks: { callback: (value) => `${fmtDecimal(value, 0)}%` },
+        },
       },
       plugins: {
         legend: { display: false },
         priorityZone: {
           enabled: true,
           xStart: meanFeedback,
-          yStart: meanPain,
+          yStart: meanPainPct,
           label: "Nhiều phản hồi và bức xúc cao",
         },
         tooltip: {
@@ -768,7 +776,7 @@ function renderAi(data) {
             title: (items) => items[0].raw.label,
             label: (ctx) => [
               `Phản hồi: ${fmtNum(ctx.raw.x)}`,
-              `Mức độ bức xúc: ${fmtDecimal(ctx.raw.y, 3)}`,
+              `Chỉ số bức xúc: ${fmtDecimal(ctx.raw.y, 1)}%`,
               `${LABELS.priority}: ${fmtDecimal(ctx.raw.priority)}/100`,
               ctx.raw.group,
             ],
@@ -782,7 +790,7 @@ function renderAi(data) {
     .map(
       (row) => `
         <article class="quote-card">
-          <strong>${escapeHtml(shortLabel(row.topic_label, 38))} · Mức bức xúc ${fmtDecimal(row.pain_score_new, 3)}</strong>
+          <strong>${escapeHtml(shortLabel(row.topic_label, 38))} · Mức bức xúc ${fmtPainPct(row.pain_score_new)}</strong>
           <p>"${escapeHtml(shortLabel(row.content_masked, 260))}"</p>
         </article>
       `
@@ -810,11 +818,11 @@ function clusterBadge(topic, index) {
 
 function renderDeepDive(data) {
   const clusters = data.deep_clusters || [];
-  const maxPain = Math.max(...clusters.map((row) => row.avg_pain_score), 1);
   const html = clusters
     .map((cluster, index) => {
       const [title, tone] = clusterBadge(cluster.topic_label, index);
-      const width = Math.max(4, (cluster.avg_pain_score / maxPain) * 100);
+      const painPercent = Math.max(0, Math.min(100, Number(cluster.avg_pain_score || 0) * 100));
+      const width = Math.max(4, painPercent);
       const samples = (cluster.quotes || [])
         .slice(0, 2)
         .map((quote) => `<div class="sample">"${escapeHtml(shortLabel(quote.content_masked, 230))}"</div>`)
@@ -824,7 +832,7 @@ function renderDeepDive(data) {
           <div class="cluster-top">
             <div>
               <h3>${escapeHtml(displayClusterTitle(cluster.topic_label))}</h3>
-              <div class="cluster-meta">${fmtNum(cluster.total_feedback)} phản hồi · mức bức xúc trung bình ${fmtDecimal(cluster.avg_pain_score, 3)}</div>
+              <div class="cluster-meta">${fmtNum(cluster.total_feedback)} phản hồi · chỉ số bức xúc trung bình ${fmtPainPct(cluster.avg_pain_score)}</div>
             </div>
             <span class="status-pill ${tone}">${title}</span>
           </div>
@@ -839,12 +847,29 @@ function renderDeepDive(data) {
   document.querySelector("#clusterList").innerHTML = html;
 }
 
+function formatGeneratedAt(value) {
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return "không xác định";
+  const time = date.toLocaleTimeString("vi-VN", {
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: false,
+  });
+  const day = date.toLocaleDateString("vi-VN", {
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric",
+  });
+  return `${time}, ${day}`;
+}
+
 async function init() {
   try {
     const response = await fetch("Data/dashboard.json", { cache: "no-store" });
     if (!response.ok) throw new Error(`Không đọc được Data/dashboard.json (${response.status})`);
     const data = await response.json();
-    document.querySelector("#generatedAt").textContent = `· cập nhật: ${new Date(data.generated_at).toLocaleString("vi-VN")}`;
+    document.querySelector("#generatedAt").textContent = `Cập nhật: ${formatGeneratedAt(data.generated_at)}`;
     renderKpis(data);
     renderWeeklyCharts(data);
     renderDelayDonut(data);
@@ -854,7 +879,7 @@ async function init() {
     renderAi(data);
     renderDeepDive(data);
   } catch (error) {
-    document.querySelector("#generatedAt").textContent = "Lỗi dữ liệu";
+    document.querySelector("#generatedAt").textContent = "Cập nhật: lỗi dữ liệu";
     document.body.insertAdjacentHTML(
       "afterbegin",
       `<div style="background:#FDECEB;color:#A50064;padding:12px 20px;font-weight:800">${escapeHtml(error.message)}</div>`

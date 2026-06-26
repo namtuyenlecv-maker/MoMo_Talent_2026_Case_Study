@@ -63,6 +63,16 @@ def fmt_topic_group(summary: pd.DataFrame) -> pd.DataFrame:
     return summary
 
 
+def recompute_topic_priority(summary: pd.DataFrame) -> pd.DataFrame:
+    summary = summary.copy()
+    max_volume = summary["total_feedback"].max() or 1
+    max_pain = summary["avg_pain_score"].max() or 1
+    summary["vol_index"] = summary["total_feedback"] / max_volume * 100
+    summary["pain_index"] = summary["avg_pain_score"] / max_pain * 100
+    summary["priority_score_new"] = summary["vol_index"] * 0.4 + summary["pain_index"] * 0.6
+    return fmt_topic_group(summary)
+
+
 def compute_ai_summary(detail: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
     neg_patterns = [
         r"lag|giật",
@@ -105,12 +115,7 @@ def compute_ai_summary(detail: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame
         total_feedback=("suggestion_id", "count"),
         avg_pain_score=("pain_score_new", "mean"),
     )
-    max_volume = summary["total_feedback"].max() or 1
-    max_pain = summary["avg_pain_score"].max() or 1
-    summary["vol_index"] = summary["total_feedback"] / max_volume * 100
-    summary["pain_index"] = summary["avg_pain_score"] / max_pain * 100
-    summary["priority_score_new"] = summary["vol_index"] * 0.4 + summary["pain_index"] * 0.6
-    summary = fmt_topic_group(summary)
+    summary = recompute_topic_priority(summary)
     return summary.sort_values("priority_score_new", ascending=False), scored
 
 
@@ -151,6 +156,16 @@ def make_dashboard_data() -> dict[str, Any]:
         .agg(total_feedback=("suggestion_id", "count"), avg_pain_score=(pain_column, "mean"))
         .sort_values("avg_pain_score", ascending=False)
     )
+    if not deep_clusters.empty:
+        deep_lookup = deep_clusters.set_index("topic_label")
+        matched_topics = ai_summary["topic_label"].isin(deep_lookup.index)
+        ai_summary.loc[matched_topics, "total_feedback"] = ai_summary.loc[matched_topics, "topic_label"].map(
+            deep_lookup["total_feedback"]
+        )
+        ai_summary.loc[matched_topics, "avg_pain_score"] = ai_summary.loc[matched_topics, "topic_label"].map(
+            deep_lookup["avg_pain_score"]
+        )
+        ai_summary = recompute_topic_priority(ai_summary).sort_values("priority_score_new", ascending=False)
 
     cluster_cards: list[dict[str, Any]] = []
     for _, row in deep_clusters.iterrows():

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-26T14:24:46",
+  "generated_at": "2026-06-26T14:34:11",
   "source_files": {
     "metrics": "CX_MoMo_Data_Metrics.xlsx",
     "insights": "CX_MoMo_AI_Insights.xlsx",
@@ -4015,10 +4015,19 @@
     {
       "topic_label": "Cụm 6: Lag / Chậm / Cải",
       "total_feedback": 189,
-      "avg_pain_score": 0.18210132503660972,
+      "avg_pain_score": 0.1797465793621565,
       "vol_index": 36.84210526315789,
       "pain_index": 100.0,
       "priority_score_new": 74.73684210526315,
+      "topic_group": "Nhóm rủi ro cao"
+    },
+    {
+      "topic_label": "Cụm 0: Gọi / Điện / Thoại",
+      "total_feedback": 330,
+      "avg_pain_score": 0.10780211546959662,
+      "vol_index": 64.32748538011695,
+      "pain_index": 59.974501796996684,
+      "priority_score_new": 61.71569523024479,
       "topic_group": "Nhóm rủi ro cao"
     },
     {
@@ -4026,17 +4035,8 @@
       "total_feedback": 355,
       "avg_pain_score": 0.07280557880925569,
       "vol_index": 69.20077972709552,
-      "pain_index": 39.98080672648528,
-      "priority_score_new": 51.66879592672937,
-      "topic_group": "Nhóm rủi ro cao"
-    },
-    {
-      "topic_label": "Cụm 0: Gọi / Điện / Thoại",
-      "total_feedback": 330,
-      "avg_pain_score": 0.07020053515998512,
-      "vol_index": 64.32748538011695,
-      "pain_index": 38.55026049144452,
-      "priority_score_new": 48.8611504469135,
+      "pain_index": 40.50456986030636,
+      "priority_score_new": 51.98305380702203,
       "topic_group": "Nhóm thông thường"
     },
     {
@@ -4044,8 +4044,8 @@
       "total_feedback": 513,
       "avg_pain_score": 0.015400135081337724,
       "vol_index": 100.0,
-      "pain_index": 8.456904461426447,
-      "priority_score_new": 45.07414267685587,
+      "pain_index": 8.567692990868698,
+      "priority_score_new": 45.14061579452122,
       "topic_group": "Nhóm thông thường"
     },
     {
@@ -4053,8 +4053,8 @@
       "total_feedback": 441,
       "avg_pain_score": 0.025818539072702797,
       "vol_index": 85.96491228070175,
-      "pain_index": 14.178117082625416,
-      "priority_score_new": 42.892835161855956,
+      "pain_index": 14.36385558174276,
+      "priority_score_new": 43.00427826132636,
       "topic_group": "Nhóm thông thường"
     },
     {
@@ -4062,8 +4062,8 @@
       "total_feedback": 439,
       "avg_pain_score": 0.003695482748944158,
       "vol_index": 85.57504873294347,
-      "pain_index": 2.029355221990404,
-      "priority_score_new": 35.44763262637163,
+      "pain_index": 2.055940514727925,
+      "priority_score_new": 35.46358380201414,
       "topic_group": "Nhóm xây dựng"
     },
     {
@@ -4071,17 +4071,17 @@
       "total_feedback": 317,
       "avg_pain_score": 0.02732021672058604,
       "vol_index": 61.79337231968811,
-      "pain_index": 15.002755589556294,
-      "priority_score_new": 33.71900228160902,
+      "pain_index": 15.199297153544602,
+      "priority_score_new": 33.83692722000201,
       "topic_group": "Nhóm thông thường"
     },
     {
       "topic_label": "Cụm 11: Xu / Nhiệm / Tích Xu",
       "total_feedback": 381,
-      "avg_pain_score": 0.004176993861109232,
+      "avg_pain_score": 0.009500789657620249,
       "vol_index": 74.26900584795322,
-      "pain_index": 2.293774556703246,
-      "priority_score_new": 31.08386707320324,
+      "pain_index": 5.285658114515712,
+      "priority_score_new": 32.87899720789072,
       "topic_group": "Nhóm xây dựng"
     },
     {
@@ -4089,8 +4089,8 @@
       "total_feedback": 224,
       "avg_pain_score": 0.03399700696348016,
       "vol_index": 43.66471734892787,
-      "pain_index": 18.66928038917091,
-      "priority_score_new": 28.667455173073698,
+      "pain_index": 18.913854763813006,
+      "priority_score_new": 28.814199797858954,
       "topic_group": "Nhóm thông thường"
     },
     {
@@ -4098,8 +4098,8 @@
       "total_feedback": 315,
       "avg_pain_score": 0.01086802881786947,
       "vol_index": 61.40350877192983,
-      "pain_index": 5.968121767199968,
-      "priority_score_new": 28.142276569091912,
+      "pain_index": 6.046306336640977,
+      "priority_score_new": 28.189187310756516,
       "topic_group": "Nhóm thông thường"
     },
     {
@@ -4107,17 +4107,17 @@
       "total_feedback": 244,
       "avg_pain_score": 0.011314931473120382,
       "vol_index": 47.563352826510716,
-      "pain_index": 6.213536046948381,
-      "priority_score_new": 22.753462758773313,
+      "pain_index": 6.29493563286279,
+      "priority_score_new": 22.802302510321958,
       "topic_group": "Nhóm thông thường"
     },
     {
       "topic_label": "Cụm 2: Trò Chơi / Xu / Game",
       "total_feedback": 238,
-      "avg_pain_score": 0.00469392977166622,
+      "avg_pain_score": 0.010050263858869674,
       "vol_index": 46.393762183235864,
-      "pain_index": 2.57764723607725,
-      "priority_score_new": 20.104093214940693,
+      "pain_index": 5.5913519436830175,
+      "priority_score_new": 21.912316039504155,
       "topic_group": "Nhóm thông thường"
     }
   ],
