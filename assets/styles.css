@@ -39,71 +39,70 @@ a {
   text-decoration: none;
 }
 
+/* ─── Navigation ─── */
 .topbar {
   align-items: center;
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--line);
   display: flex;
-  gap: 24px;
-  min-height: 88px;
-  padding: 10px 32px;
+  gap: 8px;
+  height: 72px;
+  padding: 0 clamp(20px, 5vw, 80px);
   position: sticky;
   top: 0;
-  z-index: 20;
-  backdrop-filter: blur(16px);
+  z-index: 100;
 }
 
 .brand {
   align-items: center;
   display: flex;
-  flex: 0 0 auto;
-  gap: 18px;
-  margin-right: auto;
+  flex: 1 1 0px;
+  gap: 14px;
   min-width: 0;
+  text-decoration: none;
 }
 
 .brand-logo {
   display: block;
   flex: 0 0 auto;
-  height: 68px;
+  height: 52px;
   object-fit: contain;
-  width: 74px;
+  width: auto;
 }
 
 .brand-title {
-  align-items: center;
-  background: #fff;
   border: 2px solid var(--pink-plus);
-  border-radius: 12px;
-  color: #0f0f12;
-  display: inline-flex;
-  font-size: 20px;
-  font-weight: 900;
-  line-height: 1.08;
-  min-height: 58px;
-  padding: 10px 20px;
-  text-align: center;
+  border-radius: 10px;
+  color: var(--ink);
+  flex-shrink: 1;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0;
+  line-height: 1.22;
+  min-width: 0;
+  overflow: hidden;
+  padding: 8px 16px;
+  text-overflow: ellipsis;
   white-space: nowrap;
 }
 
 .nav-links {
+  align-items: center;
   display: flex;
-  gap: 6px;
-}
-
-.nav-links a,
-.build-chip,
-.primary-link,
-.secondary-link,
-.tag {
-  border-radius: 999px;
-  font-size: 13px;
-  font-weight: 700;
+  gap: 2px;
 }
 
 .nav-links a {
-  color: var(--muted);
-  padding: 8px 12px;
+  border-radius: 8px;
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0;
+  padding: 8px 14px;
+  transition: color 0.15s, background 0.15s;
+  white-space: nowrap;
 }
 
 .nav-links a:hover {
@@ -113,13 +112,133 @@ a {
 
 .nav-links a.resource-link {
   background: var(--momo);
+  border-radius: 8px;
   color: #fff;
-  white-space: nowrap;
+  margin-left: 10px;
+  padding: 8px 16px;
 }
 
 .nav-links a.resource-link:hover {
-  background: var(--pink-plus);
+  background: #8a0053;
   color: #fff;
+}
+
+/* Hamburger toggle button */
+.nav-toggle {
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  height: 40px;
+  justify-content: center;
+  margin-left: 8px;
+  padding: 8px;
+  width: 40px;
+  flex-shrink: 0;
+}
+
+.nav-toggle span {
+  background: var(--ink);
+  border-radius: 2px;
+  display: block;
+  height: 2px;
+  transition: transform 0.25s, opacity 0.2s;
+  width: 22px;
+}
+
+/* Mobile full-screen menu overlay */
+.mobile-menu {
+  background: #fff;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  opacity: 0;
+  overflow-y: auto;
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transform: translateY(-6px);
+  transition: opacity 0.22s ease, transform 0.22s ease;
+  z-index: 200;
+}
+
+.mobile-menu.is-open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.mobile-menu-header {
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  height: 72px;
+  justify-content: space-between;
+  padding: 0 clamp(20px, 5vw, 80px);
+  flex-shrink: 0;
+}
+
+.mobile-menu-header .brand {
+  margin-right: 0;
+}
+
+.nav-close {
+  align-items: center;
+  background: none;
+  border: none;
+  color: var(--ink);
+  cursor: pointer;
+  display: flex;
+  font-size: 22px;
+  height: 40px;
+  justify-content: center;
+  line-height: 1;
+  padding: 0;
+  width: 40px;
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  padding: 0 clamp(20px, 5vw, 80px);
+}
+
+.mobile-nav a {
+  border-bottom: 1px solid var(--line);
+  color: var(--ink);
+  display: block;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.22;
+  padding: 20px 0;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.mobile-nav a:hover,
+.mobile-nav a:focus {
+  color: var(--momo);
+}
+
+.mobile-nav a.resource-link {
+  color: var(--momo);
+  font-weight: 700;
+}
+
+/* Shared tag/pill styles (referenced elsewhere) */
+.build-chip,
+.primary-link,
+.secondary-link,
+.tag {
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
 }
 
 .build-chip {
@@ -862,15 +981,14 @@ h1 {
   font-size: 0.85em;
 }
 
+/* ─── Responsive: hide desktop nav, show hamburger below 1080px ─── */
 @media (max-width: 1080px) {
-  .topbar {
-    align-items: flex-start;
-    flex-direction: column;
-    height: auto;
+  .nav-links {
+    display: none;
   }
 
-  .brand {
-    margin-right: 0;
+  .nav-toggle {
+    display: flex;
   }
 
   .kpi-grid,
@@ -898,31 +1016,21 @@ h1 {
 
 @media (max-width: 760px) {
   .topbar {
-    gap: 10px;
-    padding: 14px 20px;
-    position: static;
-  }
-
-  .brand {
-    gap: 12px;
-    width: 100%;
+    padding: 0 20px;
   }
 
   .brand-logo {
-    height: 52px;
-    width: 58px;
+    height: 44px;
   }
 
   .brand-title {
-    flex: 1 1 auto;
-    font-size: 16px;
-    min-height: 48px;
-    padding: 8px 12px;
-    white-space: normal;
+    font-size: 14px;
+    padding: 6px 12px;
   }
 
-  .nav-links {
-    flex-wrap: wrap;
+  .mobile-nav a {
+    font-size: 16px;
+    padding: 18px 0;
   }
 
   .hero,
@@ -974,5 +1082,11 @@ h1 {
   .site-footer {
     align-items: center;
     text-align: center;
+  }
+}
+
+@media (max-width: 400px) {
+  .brand-title {
+    display: none;
   }
 }

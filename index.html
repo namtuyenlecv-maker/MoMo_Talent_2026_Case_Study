@@ -15,7 +15,7 @@
   <header class="topbar">
     <a class="brand" href="#overview" aria-label="MoMo Customer Experience Dashboard home">
       <img class="brand-logo" src="momotrasparent.png" alt="MoMo">
-      <span class="brand-title">Customer Experience Excellence</span>
+      <span class="brand-title">Customer Experience</span>
     </a>
     <nav class="nav-links" aria-label="Dashboard sections">
       <a href="#overview">Tổng quan</a>
@@ -23,9 +23,32 @@
       <a href="#services">Vận hành</a>
       <a href="#ai">Phản hồi khách hàng</a>
       <a href="#recommendations">Đề xuất</a>
+      <a class="resource-link" href="https://drive.google.com/drive/folders/1E3Dw21zOwgcZdGobF42jFQZ0ecmXSZz7" target="_blank" rel="noopener">Tải tài nguyên</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Mở menu điều hướng" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Menu điều hướng" aria-hidden="true">
+    <div class="mobile-menu-header">
+      <a class="brand" href="#overview" tabindex="-1">
+        <img class="brand-logo" src="momotrasparent.png" alt="MoMo">
+        <span class="brand-title">Customer Experience</span>
+      </a>
+      <button class="nav-close" id="navClose" aria-label="Đóng menu">✕</button>
+    </div>
+    <nav class="mobile-nav" aria-label="Dashboard sections">
+      <a href="#overview">Tổng quan</a>
+      <a href="#operation">Xử lý đúng hạn</a>
+      <a href="#services">Vận hành</a>
+      <a href="#ai">Phản hồi khách hàng</a>
+      <a href="#recommendations">Đề xuất</a>
       <a class="resource-link" href="https://drive.google.com/drive/folders/1E3Dw21zOwgcZdGobF42jFQZ0ecmXSZz7" target="_blank" rel="noopener">Tải toàn bộ tài nguyên</a>
     </nav>
-  </header>
+  </div>
 
   <main>
     <section class="hero" id="overview">
